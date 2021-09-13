@@ -1,11 +1,14 @@
-function f(a){
-    if(!Array.isArray(a[0]))throw new Error ('first parameter should be an array');
-    a=a.flat(Infinity);
-    var sum=0;
-    for (let b=0;b<a.length;b++){
-    if(typeof a[b]!=='number'){throw new Error('it can\'t contain anything, but number and array');}
-    sum+=a[b];}
-    console.log(sum);
-    return;}
-    
-    f([[1],2,[[[[[[[[89]]]]]]]]]);
+var a=[[[[[[[[1]]],123,[12]]]]]],sum=0;
+function f(b,bool){
+    for(let k=0;k<b.length;k++){
+        if(Array.isArray(b[k]))f(b[k],0);
+        else {
+            if(typeof b[k] ==='number')sum=sum+b[k];
+            else throw new TypeError("every element should be number or string");
+        }
+    }
+if(bool===1)console.log(sum);
+
+return;
+}
+m(a,1);
