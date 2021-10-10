@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<img>
+<p></p>
+<button onclick="mm()">Next image</button>
+<script>
+var a=[
+"https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+"https://cdn.vox-cdn.com/thumbor/Ous3VQj1sn4tvb3H13rIu8eGoZs=/0x0:2012x1341/1400x788/filters:focal(0x0:2012x1341):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg",
+"https://media.wired.com/photos/60bab4f6eaa210b2096c93ec/master/pass/Business-Rethinking-Google-Search-1230724581.jpg",
+"https://lh3.googleusercontent.com/cgxZpj6A31pt5UkiFalO7x27Y3M6Wz1QsEmrEgQYIRwVKjJ4JXnNGHEdTLxipuy8WunrG6SNZggWm4WnaxCd3sFKpImyuB_I6X4w39cvL7N3fC1-Xt8kDQ=s0",
+"https://cdn.vox-cdn.com/thumbor/zTBzOjycX07hspHfHerM385iAag=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/69773669/acastro_210104_1777_google_0001.0.jpg"
+];
+function mm(){
+document.querySelector("img").src=a[Math.trunc((Math.random()*100000))%5];
+document.querySelector("img").addEventListener("load",function(){document.querySelector("p").innerText=this.offsetWidth;}); 
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

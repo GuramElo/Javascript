@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    
+    <div id="textBox">
+        <strong>Lorem ipsum</strong> dolor, sit amet <b>consectetur</b> adipisicing elit. Nemo sint earum ab <strong>totam</strong> praesentium aperiam suscipit reiciendis doloribus, sequi incidunt atque necessitatibus <strong>ipsam tempora</strong> obcaecati numquam provident modi, doloremque magni?
+    </div>
+<script>
+var a=document.getElementById("textBox");
+a.addEventListener("mouseover",()=>{
+    var b=[... document.querySelectorAll("div > strong,div > b")];
+    for(let t=0;t<b.length;t++){
+        b[t].style.backgroundColor = "green";
+        b[t].style.fontSize = "larger";
+    }
+});
+a.addEventListener("mouseout",()=>{
+    var b=[... document.querySelectorAll("div > strong,div > b")];
+    for(let t=0;t<b.length;t++){
+        b[t].style.background= "inherit";
+        b[t].style.fontSize = "inherit";
+    }
+});
+
+
+console.log(document.querySelector("h1").nodeType);
+</script>
+
+
+
+</body>
+</html>
